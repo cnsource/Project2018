@@ -57,11 +57,12 @@ public class RegisterPage extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_register_page, container, false);
+        initPermission();
         user_icon = view.findViewById(R.id.user_icon);
         user_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                initPermission();
+                startIntent();
             }
         });
         name = view.findViewById(R.id.user_name);
@@ -142,11 +143,12 @@ public class RegisterPage extends Fragment {
 
     void initPermission() {
         String[] permissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
-        if (ActivityCompat.checkSelfPermission(getContext(), permissions[0]) != PackageManager.PERMISSION_GRANTED) {
-            if (shouldShowRequestPermissionRationale(permissions[0]) == false) ;
+        if (ActivityCompat.checkSelfPermission(getContext(), permissions[0]) != PackageManager.PERMISSION_GRANTED)
+            if (shouldShowRequestPermissionRationale(permissions[0]) == false)
+                //TOdo
+                ;
             else
                 ActivityCompat.requestPermissions(getActivity(), permissions, 1);
-        } else startIntent();
     }
 
     private void setUserIcon(String objectId) {

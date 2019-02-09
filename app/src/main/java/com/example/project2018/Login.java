@@ -54,6 +54,7 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
         Uri uri=data.getData();
         Log.i("结果码","结果码：  " + resultCode);
         Log.i("Login_Uri",uri.toString());
