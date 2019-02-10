@@ -6,12 +6,32 @@
     tools:context=".BookShow">
 
     <!-- TODO: Update blank fragment layout -->
-
-<Button
+<LinearLayout
+    android:orientation="vertical"
+    android:weightSum="1"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="退出登录"
-    android:textSize="28sp"
-    android:id="@+id/loginout"
-    android:textColor="#0aafa0"/>
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="退出登录"
+        android:textSize="28sp"
+        android:id="@+id/loginout"
+        android:textColor="#0aafa0"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/pullre"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/infolist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>
+
 </FrameLayout>

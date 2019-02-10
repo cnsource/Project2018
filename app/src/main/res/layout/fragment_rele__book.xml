@@ -6,13 +6,15 @@
     tools:context=".Rele_Book">
 
    <LinearLayout
+       android:weightSum="1"
        android:gravity="bottom"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:orientation="vertical">
-       <EditText
+       <TextView
            android:layout_width="match_parent"
-           android:layout_height="wrap_content"
+           android:layout_height="0dp"
+           android:layout_weight="1"
            android:id="@+id/addressInfo"
            android:hint="地址信息："
            />
@@ -21,6 +23,18 @@
            android:layout_height="wrap_content"
            android:id="@+id/add"
            android:text="添加地址"
+           android:textSize="22dp"/>
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/get"
+           android:text="获取地址"
+           android:textSize="22dp"/>
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/getnew"
+           android:text="获取新地址"
            android:textSize="22dp"/>
    </LinearLayout>
 
