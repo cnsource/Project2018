@@ -9,6 +9,7 @@
         android:layout_margin="10dp"
         app:cardCornerRadius="8dp"
         android:id="@+id/card"
+        app:cardElevation="5dp"
         >
         <TextView
             android:text="haha"
