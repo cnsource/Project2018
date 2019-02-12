@@ -15,10 +15,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Bmob.initialize(this,"89f3ffb5df046d33354765d13af06dd3");
         if (BmobUser.isLogin()){
-            startActivity(new Intent(this,ContentActivity.class));
+            startActivity(new Intent(this,DrawerMenu.class));
             finish();
         }else
-            startActivity(new Intent(getApplicationContext(),Login.class));
+            startActivity(new Intent(getApplicationContext(),DrawerMenu.class));
         finish();
     }
 }

@@ -40,7 +40,7 @@ public class LoginPage extends Fragment {
                     public void done(User user, BmobException e) {
                         if (e==null) {
                             Log.i("登录成功", ".......................");
-                            startActivity(new Intent(getContext(),ContentActivity.class));
+                            startActivity(new Intent(getContext(),DrawerMenu.class));
                             getActivity().finish();
                         }else
                             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
